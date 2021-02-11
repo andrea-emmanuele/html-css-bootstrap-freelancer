@@ -1,5 +1,6 @@
 body {
     font-size: 12px;
+    color: #fff;
 }
 
 h1 {
@@ -7,8 +8,27 @@ h1 {
     text-transform: uppercase;
 }
 
+h3  {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.55em;
+}
+
+button {
+    border-radius: 8px !important;
+    margin: 20px 0 40px 0;
+    transition: all .2s ease-in-out;
+}
+
+.row {
+    margin: 0;
+}
+
 .container {
-    padding: 40px 30px;
+    padding: 0 30px;
 }
 
 .divider {
@@ -31,12 +51,43 @@ i.fa-star {
     vertical-align: middle;
 }
 
+.btn-xl {
+    padding: 15px 30px;
+}
+
+.circle {
+    position: relative;
+    font-size: 1.5em;
+    height: 47px;
+    width: 47px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 10px 0 25px 10px;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.circle:first-of-type {
+    margin-left: 0;
+}
+
+.circle > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.m-t3 {
+    margin-top: 30px;
+}
+
 /* header */
 
 /* nav */
 
 .navbar {
-    background: #2C3E50;
     border: none;
     border-radius: 0;
     margin-bottom: 0;
@@ -110,8 +161,6 @@ span.glyphicon-menu-hamburger {
 
 .jumbotron {
     text-align: center;
-    color: #fff;
-    background-color: #1ABC9C;
     padding-top: 90px;
     padding-bottom: 80px;
 }
@@ -130,16 +179,13 @@ span.glyphicon-menu-hamburger {
     font-size: 3.8em;
 }
 
-.jumbotron p {
-    font-size: 1.55em;
-}
-
 /* main */
 
 /* portfolio */
 
-#portfolio h1 {
-    font-size: 3em;
+#portfolio .row {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #portfolio .card {
@@ -176,18 +222,106 @@ span.glyphicon-menu-hamburger {
     width: 100%;
 }
 
+/* about */
+
+#about button {
+    font-size: 1.55em;
+    color: #fff;
+    background: none;
+    border: 2px solid #fff;
+}
+
+#about button > i.fa-download {
+    padding-right: 5px;
+}
+
+/* contact */
+
+#contact input[type="text"], #contact textarea {
+    width: 100%;
+    font-size: 2em;
+    margin: 20px 0;
+    border: none;
+}
+
+#contact textarea {
+    height: 200px;
+}
+
+#contact input[type="text"]:focus, #contact textarea:focus {
+    outline: none;
+}
+
+#contact .small-line {
+    width: 100%;
+    height: 1px;
+    background: #E9ECEF;
+    margin: 10px 0;
+}
+
+#contact button {
+    font-size: 1.55em;
+    color: #fff;
+    background: #1ABC9C;
+    border: 2px solid #1ABC9C;
+}
+
+#contact button:hover {
+    background: #159a80;
+    border: 2px solid #148f77;
+}
+
+/* footer */
+
+footer address {
+    width: 65%;
+    font-size: 1.5em;
+    margin: 30px auto;
+}
+
+#pie {
+    background: #1A252F;
+    padding: 30px;
+}
+
+#pie p {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
 /* common */
 
-#portfolio h1 {
+.navbar, footer > .container-fluid {
+    background: #2C3E50;
+}
+
+.jumbotron, #about {
+    background-color: #1ABC9C;
+}
+
+#portfolio, .container-fluid {
+    padding: 40px 0 80px 0;
+}
+
+#portfolio h1, #about h1, #contact h1 {
+    font-size: 3em;
+}
+
+#portfolio h1, #contact h1, #contact {
     color: #2C3E50;
 }
 
-#portfolio .line {
+#portfolio .line, #contact .line {
     background-color: #2C3E50;
 }
 
-#portfolio i.fa-star {
+#portfolio i.fa-star, #contact i.fa-star {
     color: #2C3E50;
+}
+
+#about button:hover, .circle:hover {
+    color: #000;
+    background: #fff;
 }
 
 /* tablet */
@@ -201,11 +335,27 @@ span.glyphicon-menu-hamburger {
 
 /* medium screen */
 
-@media all and (min-width: 991px) {
+@media all and (min-width: 992px) {
 
     body {
         font-size: 16px;
     }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    h3  {
+        font-size: 1.55em;
+    }
+
+    .circle {
+        font-size: 1em;
+    }
+
+    /* header */
+
+    /* nav */
 
     .navbar > .container {
         padding: 27px 30px;
@@ -215,12 +365,42 @@ span.glyphicon-menu-hamburger {
         margin-top: 0;
     }
 
-    /* header */
-
     /* jumbotron */
 
     .jumbotron > .container {
         padding: 110px 37px 0 37px;
+    }
+
+    .jumbotron p {
+        font-size: 1.55em;
+    }
+
+    /* main */
+
+    /* about */
+
+    #about button {
+        font-size: 1.2em;
+    }
+
+    /* contact */
+
+    #contact input[type="text"], #contact textarea {
+        font-size: 1.4em;
+    }
+
+    #contact button {
+        font-size: 1.1em;
+    }
+
+    /* footer */
+
+    footer address {
+        font-size: 1.1em;
+    }
+
+    #pie p {
+        font-size: .8em;
     }
 
     /* common */
