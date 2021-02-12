@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap');
+
 body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     font-size: 12px;
     color: #fff;
 }
 
 h1 {
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
+    margin-top: 0;
 }
 
 h3  {
@@ -83,6 +89,10 @@ i.fa-star {
     margin-top: 30px;
 }
 
+.p-lr-2 {
+    padding: 0 20px;
+}
+
 /* header */
 
 /* nav */
@@ -118,6 +128,8 @@ i.fa-star {
 }
 
 a.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin-top: 5px;
 }
 
@@ -162,7 +174,8 @@ span.glyphicon-menu-hamburger {
 .jumbotron {
     text-align: center;
     padding-top: 90px;
-    padding-bottom: 80px;
+    padding-bottom: 96px;
+    margin-bottom: 0;
 }
 
 .jumbotron > .container {
@@ -172,11 +185,15 @@ span.glyphicon-menu-hamburger {
 
 .jumbotron img {
     height: 250px;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
 }
 
 .jumbotron h1 {
-    font-size: 3.8em;
+    font-size: 3.7em;
+}
+
+.jumbotron p {
+    margin-bottom: 0;
 }
 
 /* main */
@@ -194,6 +211,10 @@ span.glyphicon-menu-hamburger {
     margin-bottom: 50px;
     overflow: hidden;
     cursor: pointer;
+}
+
+#portfolio .col-xs-12:last-of-type > .card {
+    margin-bottom: 0;
 }
 
 #portfolio .card > .card-overlay {
@@ -273,6 +294,10 @@ span.glyphicon-menu-hamburger {
 
 /* footer */
 
+footer > .container-fluid {
+    padding: 80px 0;
+}
+
 footer address {
     width: 65%;
     font-size: 1.5em;
@@ -281,7 +306,7 @@ footer address {
 
 #pie {
     background: #1A252F;
-    padding: 30px;
+    padding: 28px 0;
 }
 
 #pie p {
@@ -300,7 +325,7 @@ footer address {
 }
 
 #portfolio, .container-fluid {
-    padding: 40px 0 80px 0;
+    padding: 96px 0 96px 0;
 }
 
 #portfolio h1, #about h1, #contact h1 {
@@ -328,8 +353,20 @@ footer address {
 
 @media all and (min-width: 768px) {
 
+    /* header */
+
+    /* nav */
+
     a.navbar-brand {
         margin-top: 0;
+    }
+
+    /* main */
+
+    /* portfolio */
+
+    #portfolio .col-xs-12:nth-last-of-type(2) > .card {
+        margin-bottom: 0;
     }
 }
 
@@ -371,16 +408,28 @@ footer address {
         padding: 110px 37px 0 37px;
     }
 
+    .jumbotron h1 {
+        font-size: 3.9em;
+    }
+
     .jumbotron p {
         font-size: 1.55em;
     }
 
     /* main */
 
+    /* portfolio */
+
+    #portfolio .col-xs-12:nth-last-of-type(3) > .card {
+        margin-bottom: 0;
+    }
+
     /* about */
 
     #about button {
-        font-size: 1.2em;
+        font-size: 1.21em;
+        padding: 16px 28px;
+        margin-top: 30px;
     }
 
     /* contact */
@@ -389,15 +438,7 @@ footer address {
         font-size: 1.4em;
     }
 
-    #contact button {
-        font-size: 1.1em;
-    }
-
     /* footer */
-
-    footer address {
-        font-size: 1.1em;
-    }
 
     #pie p {
         font-size: .8em;
@@ -407,5 +448,9 @@ footer address {
 
     i.fa-star {
         font-size: 2em;
+    }
+
+    footer address, #contact button {
+        font-size: 1.1em;
     }
 }
