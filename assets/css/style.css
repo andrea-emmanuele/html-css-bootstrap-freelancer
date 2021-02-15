@@ -266,7 +266,7 @@ span.glyphicon-menu-hamburger {
 }
 
 #contact textarea {
-    height: 200px;
+    resize: vertical; min-height: 200px;
 }
 
 #contact input[type="text"]:focus, #contact textarea:focus {
